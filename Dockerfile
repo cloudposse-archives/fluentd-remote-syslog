@@ -22,5 +22,5 @@ RUN apk --no-cache --update add sudo build-base ruby-dev && \
 
 EXPOSE 24284
 
-CMD fluentd -c /fluentd/etc/fluent.conf -p /fluentd/plugins $FLUENTD_OPT
+CMD exec fluentd -c /fluentd/etc/fluent.conf -p /fluentd/plugins $FLUENTD_OPT
 
